@@ -2,7 +2,8 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 
-import design from "../../design-tokens";
+import design from "../../theme";
+import Theme from "../../theme/theme";
 
 const styles = StyleSheet.create({
   button: {

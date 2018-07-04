@@ -1,25 +1,6 @@
-import React from "react";
-import { Text } from "react-native";
+import Theme from "../theme";
 
-import { storiesOf } from "@storybook/react-native";
-import { action } from "@storybook/addon-actions";
-import { linkTo } from "@storybook/addon-links";
+export { default as Button } from "./Button/Button";
+export { default as Text } from "./Text/Text";
 
-import Button from "./Button";
-import CenterView from "./CenterView";
-import Welcome from "./Welcome";
-
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-));
-
-storiesOf("Button", module)
-  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add("with text", () => (
-    <Button onPress={action("clicked-text")} label="Button" />
-  ))
-  .add("with some emoji", () => (
-    <Button onPress={action("clicked-emoji")}>
-      <Text>😀 😎 👍 💯</Text>
-    </Button>
-  ));
+export default new Theme();
