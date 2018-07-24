@@ -23,7 +23,20 @@ const stuff = {
     small: 8,
     xsmall: 4
   },
-  borderRadius: 10
+  buttonSize: {
+    xlarge: 100,
+    large: 84,
+    medium: 68,
+    small: 52,
+    xsmall: 36
+  },
+  iconSize: {
+    xlarge: 52,
+    large: 44,
+    medium: 36,
+    small: 28,
+    xsmall: 20
+  }
 };
 
 export default {

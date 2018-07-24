@@ -6,6 +6,7 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
 import Button from "./Button";
+import Icon from "./Icon";
 import CenterView from "./CenterView";
 import Welcome from "./Welcome";
 
@@ -23,3 +24,8 @@ storiesOf("Button", module)
       <Text>😀 😎 👍 💯</Text>
     </Button>
   ));
+storiesOf("Icon", module)
+    .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+    .add("default", () => (
+        <Icon onPress={action("clicked-text")} />
+    ));
