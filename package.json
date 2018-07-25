@@ -20,7 +20,7 @@
 		"eject": "react-native-scripts eject",
 		"android": "react-native-scripts android",
 		"ios": "react-native-scripts ios",
-		"test": "jest",
+		"test": "jest --coverage && ./node_modules/.bin/codecov -t 487a4b20-db1b-40a2-bea4-4a2f2756109e",
 		"storybook": "storybook start -p 7007"
 	},
 	"jest": {
@@ -28,6 +28,7 @@
 		"setupTestFrameworkScriptFile": "<rootDir>/setupTests.js"
 	},
 	"dependencies": {
+		"codecov": "^3.0.4",
 		"enzyme": "^3.3.0",
 		"enzyme-adapter-react-16": "^1.1.1",
 		"react": "16.3.1",
