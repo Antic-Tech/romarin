@@ -10,7 +10,6 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 import design from "../../design-tokens";
 
-
 const Icon = props => {
     const {
         name,
@@ -23,7 +22,6 @@ const Icon = props => {
     return (
         <View>
           <TouchableOpacity
-            underlayColor = {design.color[underlayColor]}
             style={[
                 styles.button,
                 {
@@ -50,14 +48,12 @@ Icon.propTypes = {
     name: PropTypes.string,
     size: PropTypes.string,
     color: PropTypes.string,
-    underlayColor: PropTypes.string,
     onPress: PropTypes.func,
 };
 
 Icon.defaultProps = {
     name: 'android',
     size: 'medium',
-    underlayColor: 'white',
     color: 'black',
     onPress: () => {}
 };
