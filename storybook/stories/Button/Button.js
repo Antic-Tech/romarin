@@ -7,12 +7,12 @@ import design from '../../theme';
 const styles = StyleSheet.create({
 	button: {
 		borderRadius: design.borderRadius,
-		padding: design.padding.medium,
-		backgroundColor: design.color.primary
+		padding: design.paddingMedium,
+		backgroundColor: design.colorPrimary
 	},
 	label: {
-		fontSize: design.fontSize.medium,
-		color: design.color.white
+		fontSize: design.fontSizeMedium,
+		color: design.colorWhite
 	}
 });
 

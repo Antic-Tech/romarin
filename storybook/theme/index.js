@@ -1,6 +1,7 @@
 import color from './color';
 
 export default {
+	...color,
 	borderRadius: 10,
 
 	fontSizeXLarge: 34,
