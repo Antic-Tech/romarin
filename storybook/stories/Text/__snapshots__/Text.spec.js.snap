@@ -7,8 +7,104 @@ exports[`Text Snapshots renders correctly 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": undefined,
+      "color": "#333333",
       "fontSize": undefined,
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Text Snapshots renders large correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#333333",
+      "fontSize": 28,
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Text Snapshots renders medium correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#333333",
+      "fontSize": 17,
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Text Snapshots renders muted correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#999999",
+      "fontSize": undefined,
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Text Snapshots renders small correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#333333",
+      "fontSize": 13,
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Text Snapshots renders small correctly 2`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#333333",
+      "fontSize": undefined,
+    }
+  }
+>
+  Text
+</Text>
+`;
+
+exports[`Text Snapshots renders xlarge correctly 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#333333",
+      "fontSize": 34,
     }
   }
 >
