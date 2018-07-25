@@ -8,59 +8,11 @@ import {
 } from "react-native";
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
-import design from "../../design-tokens";
-
-const Icon = props => {
-    const {
-        name,
-        size,
-        color,
-        underlayColor,
-        onPress
-    } = props;
-
-    return (
-        <View>
-          <TouchableOpacity
-            style={[
-                styles.button,
-                {
-                    borderRadius: design.buttonSize[size],
-                    height: design.buttonSize[size],
-                    width: design.buttonSize[size],
-                    backgroundColor: design.color[underlayColor]
-                }
-            ]}
-            onPress={onPress}
-           >
-            <MaterialIcon
-              style={styles.icon}
-              size={design.iconSize[size]}
-              name={name}
-              color={design.color[color]}
-            />
-          </TouchableOpacity>
-        </View>
-    );
-};
-
-Icon.propTypes = {
-    name: PropTypes.string,
-    size: PropTypes.string,
-    color: PropTypes.string,
-    onPress: PropTypes.func,
-};
-
-Icon.defaultProps = {
-    name: 'android',
-    size: 'medium',
-    color: 'black',
-    onPress: () => {}
-};
+import theme from "../../theme";
 
 const styles = StyleSheet.create({
     button: {
-        margin: design.margin.small,
+        margin: theme.margin.small,
         shadowColor: 'rgba(0,0,0,.4)',
         shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
@@ -72,5 +24,69 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent'
     }
 });
+
+const Icon = props => {
+    const buttonSizes = {
+        xlarge: theme.buttonSizeXLarge,
+        large: theme.buttonSizeLarge,
+        medium: theme.buttonSizeMedium,
+        small: theme.buttonSizeSmall,
+        xsmall: theme.buttonSizeXSmall
+    };
+    const iconSizes = {
+        xlarge: theme.iconSizeXLarge,
+        large: theme.iconSizeLarge,
+        medium: theme.iconSizeMedium,
+        small: theme.iconSizeSmall,
+        xsmall: theme.iconSizeXSmall
+    };
+    const {
+        name,
+        size,
+        color,
+        onPress,
+        backgroundColor
+    } = props;
+
+    return (
+        <View>
+          <TouchableOpacity
+            style={[
+                styles.button,
+                {
+                    borderRadius: buttonSizes[size],
+                    height: buttonSizes[size],
+                    width: buttonSizes[size],
+                    backgroundColor: theme.color[backgroundColor]
+                }
+            ]}
+            onPress={onPress}
+           >
+            <MaterialIcon
+              style={styles.icon}
+              size={iconSizes[size]}
+              name={name}
+              color={theme.color[color]}
+            />
+          </TouchableOpacity>
+        </View>
+    );
+};
+
+Icon.propTypes = {
+    name: PropTypes.string,
+    size: PropTypes.string,
+    color: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    onPress: PropTypes.func,
+};
+
+Icon.defaultProps = {
+    name: 'android',
+    size: 'medium',
+    color: 'colorWhite',
+    backgroundColor: 'colorPrimary',
+    onPress: () => {}
+};
 
 export { Icon as default };
