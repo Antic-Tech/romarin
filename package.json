@@ -1,32 +1,37 @@
 {
-  "name": "romarin",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "react-native-scripts": "1.14.0",
-    "jest-expo": "~27.0.0",
-    "react-test-renderer": "16.3.1",
-    "@storybook/react-native": "^3.4.5",
-    "@storybook/addon-actions": "^3.4.5",
-    "@storybook/addon-links": "^3.4.5",
-    "react-dom": "16.3.1",
-    "prop-types": "^15.6.1"
-  },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
-  "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "jest",
-    "storybook": "storybook start -p 7007"
-  },
-  "jest": {
-    "preset": "jest-expo"
-  },
-  "dependencies": {
-    "expo": "^27.0.1",
-    "react": "16.3.1",
-    "react-native": "~0.55.2"
-  }
+	"name": "romarin",
+	"version": "1.1.2",
+	"private": false,
+	"devDependencies": {
+		"@storybook/addon-actions": "^3.4.5",
+		"@storybook/addon-links": "^3.4.5",
+		"@storybook/react-native": "^3.4.5",
+		"expo": "^27.0.1",
+		"jest-expo": "~27.0.0",
+		"jest-extended": "^0.7.2",
+		"prop-types": "^15.6.1",
+		"react-dom": "16.3.1",
+		"react-native-scripts": "1.14.0",
+		"react-test-renderer": "^16.4.1"
+	},
+	"main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+	"scripts": {
+		"start": "react-native-scripts start",
+		"eject": "react-native-scripts eject",
+		"android": "react-native-scripts android",
+		"ios": "react-native-scripts ios",
+		"test": "jest --coverage && ./node_modules/.bin/codecov -t 487a4b20-db1b-40a2-bea4-4a2f2756109e",
+		"storybook": "storybook start -p 7007"
+	},
+	"jest": {
+		"preset": "react-native",
+		"setupTestFrameworkScriptFile": "<rootDir>/setupTests.js"
+	},
+	"dependencies": {
+		"codecov": "^3.0.4",
+		"enzyme": "^3.3.0",
+		"enzyme-adapter-react-16": "^1.1.1",
+		"react": "16.3.1",
+		"react-native": "~0.55.2"
+	}
 }
