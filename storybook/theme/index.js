@@ -22,7 +22,7 @@ export default {
 	marginSmall: 8,
 	marginXSmall: 4,
 
-	iconSizeXlarge: 52,
+	iconSizeXLarge: 52,
 	iconSizeLarge: 44,
 	iconSizeMedium: 36,
 	iconSizeSmall: 28,

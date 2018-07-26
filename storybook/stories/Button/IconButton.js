@@ -35,7 +35,7 @@ const IconButton = props => {
 		small: theme.iconSizeSmall,
 		xsmall: theme.iconSizeXSmall
 	};
-	const { name, size, color, onPress, backgroundColor } = props;
+	const { name, size, onPress, iconColor, backgroundColor } = props;
 
 	return (
 		<View>
@@ -51,7 +51,7 @@ const IconButton = props => {
 				]}
 				onPress={onPress}
 			>
-				<MaterialIcons style={styles.icon} size={iconSizes[size]} name={name} color={theme[color]} />
+				<MaterialIcons style={styles.icon} size={iconSizes[size]} name={name} color={theme[iconColor]} />
 			</TouchableOpacity>
 		</View>
 	);
@@ -60,7 +60,7 @@ const IconButton = props => {
 IconButton.propTypes = {
 	name: PropTypes.string,
 	size: PropTypes.string,
-	color: PropTypes.string,
+	iconColor: PropTypes.string,
 	backgroundColor: PropTypes.string,
 	onPress: PropTypes.func
 };
@@ -68,7 +68,7 @@ IconButton.propTypes = {
 IconButton.defaultProps = {
 	name: 'android',
 	size: 'medium',
-	color: 'colorWhite',
+	iconColor: 'colorWhite',
 	backgroundColor: 'colorPrimary',
 	onPress: () => {}
 };
