@@ -22,11 +22,11 @@ const styles = StyleSheet.create({
 
 const IconButton = props => {
 	const buttonSizes = {
-		xlarge: theme.buttonSizeXLarge,
-		large: theme.buttonSizeLarge,
-		medium: theme.buttonSizeMedium,
-		small: theme.buttonSizeSmall,
-		xsmall: theme.buttonSizeXSmall
+		xlarge: (theme.iconSizeXLarge * 2 - 4),
+		large: (theme.iconSizeLarge * 2 - 4),
+		medium: (theme.iconSizeMedium * 2 - 4),
+		small: (theme.iconSizeSmall * 2 - 4),
+		xsmall: (theme.iconSizeXSmall * 2 - 4)
 	};
 	const iconSizes = {
 		xlarge: theme.iconSizeXLarge,
