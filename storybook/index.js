@@ -1,11 +1,11 @@
 /* eslint-disable global-require */
-import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
-import { getStorybookUI, configure } from '@storybook/react-native';
+import React, { Component } from "react";
+import { AppRegistry } from "react-native";
+import { getStorybookUI, configure } from "@storybook/react-native";
 
 // import stories
 configure(() => {
-  require('./stories');
+  require("./stories");
 }, module);
 
 // This assumes that storybook is running on the same host as your RN packager,
@@ -21,5 +21,5 @@ class StorybookUIHMRRoot extends Component {
   }
 }
 
-AppRegistry.registerComponent('%APP_NAME%', () => StorybookUIHMRRoot);
+AppRegistry.registerComponent("%APP_NAME%", () => StorybookUIHMRRoot);
 export default StorybookUIHMRRoot;
