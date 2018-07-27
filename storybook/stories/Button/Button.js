@@ -16,17 +16,23 @@ const styles = StyleSheet.create({
 	}
 });
 
-const Button = props => (
-	<TouchableOpacity {...props} style={styles.button} onPress={props.disabled ? undefined : props.onPress}>
-		<Text style={styles.label}>{props.label}</Text>
-	</TouchableOpacity>
-);
+const Button = props => {
+	  const { onPress, disabled, full, label } = props;
+
+    return(
+        <TouchableOpacity
+          style={styles.button}
+          onPress={disabled ? undefined : onPress}>
+            <Text style={styles.label}>{props.label}</Text>
+        </TouchableOpacity>
+    );
+};
 
 Button.propTypes = {
 	onPress: PropTypes.func,
 	disabled: PropTypes.bool,
 	full: PropTypes.bool,
-	text: PropTypes.string
+	label: PropTypes.string
 };
 
 Button.defaultProps = {
