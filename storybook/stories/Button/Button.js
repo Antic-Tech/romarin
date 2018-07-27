@@ -23,7 +23,7 @@ const Button = props => {
         <TouchableOpacity
           style={styles.button}
           onPress={disabled ? undefined : onPress}>
-            <Text style={styles.label}>{props.label}</Text>
+            <Text style={styles.label}>{label}</Text>
         </TouchableOpacity>
     );
 };
