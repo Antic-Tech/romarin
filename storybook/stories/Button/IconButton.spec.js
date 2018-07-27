@@ -1,14 +1,14 @@
-import React from 'react';
-import IconButton from './IconButton';
+import React from "react";
+import IconButton from "./IconButton";
 
-import { verifySnapshot } from '../../utils/testUtils';
+import { verifySnapshot } from "../../utils/testUtils";
 
-jest.mock('react-native-vector-icons', () => ({ MaterialIcons: () => null }));
+jest.mock("react-native-vector-icons", () => ({ MaterialIcons: () => null }));
 
-describe('IconButton', () => {
-	describe('Snapshots', () => {
-		it('renders correctly', () => {
-			verifySnapshot(<IconButton />);
-		});
-	});
+describe("IconButton", () => {
+  describe("Snapshots", () => {
+    it("renders correctly", () => {
+      verifySnapshot(<IconButton />);
+    });
+  });
 });

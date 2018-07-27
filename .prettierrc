@@ -6,6 +6,4 @@
     "trailingComma": "none",
     "jsxBracketSameLine": false,
     "parser": "flow",
-    "noSemi": true,
-    "rcVerbose": true
   }
