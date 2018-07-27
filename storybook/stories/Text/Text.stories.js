@@ -8,14 +8,22 @@ import CenterView from "../CenterView";
 
 storiesOf("Text", module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add("with text", () => (
+    .add("default", () => (
+        <React.Fragment>
+          <Text>default text</Text>
+        </React.Fragment>
+    ))
+  .add("size prop", () => (
     <React.Fragment>
-      <Text size="xlarge">xlarge</Text>
-      <Text size="large">large</Text>
-      <Text size="medium">medium</Text>
-      <Text size="small">small</Text>
-      <Text size="xsmall">xsmall</Text>
-
-      <Text muted>medium</Text>
+      <Text size="xlarge">size xlarge</Text>
+      <Text size="large">size large</Text>
+      <Text size="medium">size medium</Text>
+      <Text size="small">size small</Text>
+      <Text size="xsmall">size xsmall</Text>
+    </React.Fragment>
+  ))
+  .add("muted prop", () => (
+    <React.Fragment>
+      <Text muted>muted true</Text>
     </React.Fragment>
   ));

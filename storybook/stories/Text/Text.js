@@ -11,17 +11,28 @@ const RomarinText = props => {
 		small: theme.fontSizeSmall,
 		xsmall: theme.fontSizeXSmall
 	};
+	const { size, muted, children } = props;
 
 	return (
 		<Text
 			style={{
-				fontSize: fontSizes[props.size],
-				color: props.muted ? theme.textColorMuted : theme.textColor
+				fontSize: fontSizes[size],
+				color: muted ? theme.textColorMuted : theme.textColor
 			}}
 		>
-			{props.children}
+			{children}
 		</Text>
 	);
+};
+
+RomarinText.propTypes = {
+	  size: PropTypes.string,
+	  muted: PropTypes.bool
+};
+
+RomarinText.defaultProps = {
+    size: "medium",
+    muted: false
 };
 
 export { RomarinText as default };

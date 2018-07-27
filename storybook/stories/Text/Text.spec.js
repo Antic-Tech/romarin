@@ -21,9 +21,6 @@ describe('Text', () => {
 		it('renders small correctly', () => {
 			verifySnapshot(<Text size="small">Text</Text>);
 		});
-		it('renders small correctly', () => {
-			verifySnapshot(<Text xsize="small">Text</Text>);
-		});
 		it('renders muted correctly', () => {
 			verifySnapshot(<Text muted>Text</Text>);
 		});
