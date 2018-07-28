@@ -1,15 +1,15 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import theme from '../../theme';
+import ThemeProvider from '../../theme';
 
 const RomarinText = props => {
 	const fontSizes = {
-		xlarge: theme.fontSizeXLarge,
-		large: theme.fontSizeLarge,
-		medium: theme.fontSizeMedium,
-		small: theme.fontSizeSmall,
-		xsmall: theme.fontSizeXSmall
+		xlarge: ThemeProvider.theme.fontSizeXLarge,
+		large: ThemeProvider.theme.fontSizeLarge,
+		medium: ThemeProvider.theme.fontSizeMedium,
+		small: ThemeProvider.theme.fontSizeSmall,
+		xsmall: ThemeProvider.theme.fontSizeXSmall
 	};
 	const { size, muted, children } = props;
 
@@ -17,7 +17,7 @@ const RomarinText = props => {
 		<Text
 			style={{
 				fontSize: fontSizes[size],
-				color: muted ? theme.textColorMuted : theme.textColor
+				color: muted ? ThemeProvider.theme.textColorMuted : ThemeProvider.theme.textColor
 			}}
 		>
 			{children}
@@ -26,13 +26,13 @@ const RomarinText = props => {
 };
 
 RomarinText.propTypes = {
-	  size: PropTypes.string,
-	  muted: PropTypes.bool
+	size: PropTypes.string,
+	muted: PropTypes.bool
 };
 
 RomarinText.defaultProps = {
-    size: "medium",
-    muted: false
+	size: 'medium',
+	muted: false
 };
 
 export { RomarinText as default };
