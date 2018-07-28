@@ -5,7 +5,7 @@ import { getStorybookUI, configure } from '@storybook/react-native';
 
 // import stories
 configure(() => {
-  require('./stories');
+	require('./stories');
 }, module);
 
 // This assumes that storybook is running on the same host as your RN packager,
@@ -16,10 +16,10 @@ const StorybookUIRoot = getStorybookUI({ port: 7007, onDeviceUI: true });
 // https://github.com/storybooks/storybook/issues/2081
 // eslint-disable-next-line react/prefer-stateless-function
 class StorybookUIHMRRoot extends Component {
-  render() {
-    return <StorybookUIRoot />;
-  }
+	render() {
+		return <StorybookUIRoot />;
+	}
 }
 
-AppRegistry.registerComponent('%APP_NAME%', () => StorybookUIHMRRoot);
+AppRegistry.registerComponent('romarin', () => StorybookUIHMRRoot);
 export default StorybookUIHMRRoot;

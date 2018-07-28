@@ -1,3 +1,11 @@
 language: node_js
 node_js:
-  - "7"
+- '7'
+deploy:
+  provider: npm
+  on:
+    tags: true
+  email: timmy.garrabrant@gmail.com
+  api_key:
+    secure: cwq3Z3XnqixTDKgZCPthez31BKQFTwRv3IRobSHmw7uYJpG6tTHOMPQUTHdGXYZhIJTA8lxab/tkmUTmHWWG2gL5Si/eubdf2NzVogQAeXcDAA0IWr72Yt1066QTUm2MWgQQzkbNLVNkJn/HOkgmbH68XwJtnqcJSuZyXDrUjI4jorNsERV2osG0v0gA0AV2ZlK2A0iDu5/HRKPMKFjB5YEexRDA4sGAFgueP0AcUGRt/h2wrRWCJND4hAPdMB9i3qNpcEu5oGOuhTgC+o2fOanbDnqhoLsec9+nv29lzZBF1IPrFN7/LiepK37i8d8yho/Klgwe0oz6dWxMJyTVv3fBlhtL9vVlAimSkYBDN6WldvH7sD7l5nYKgSG9gSWA6rXcwDs2RSk0E6epI4TVUki70CRdNt3/iBz6t3FkruT0cgcY7rlAqBL8gKq+XBYaH+64YMHlx0JxRwEf+RuTFDV8LW2KXEhqm4lFirl20dE7y0jBAxgLYfBUz4dnrkx+3WeKZKFZh+VhQiyrGOunxdsq59i9lp6ftrL6X1S5peLVg1IUnFawl2/W23RoRU7vIVhfu0XXh8idg1FSFVSNGKpeLqW0JTaaBOQb9PWA6WY+I8LmEj2Nu+5HOyRa3VoMKqPAcohERtEIcpP6/XeYA2Bd5ypzRQHvuv+fwzhjouc=
+before_deploy: "npm version from-git"
