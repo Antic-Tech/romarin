@@ -6,6 +6,10 @@
 
 ## Cut a Release
 
-```
+##### From master run: 
+
+```sh
+git pull
 yarn release
+git push --follow-tags origin master
 ```
