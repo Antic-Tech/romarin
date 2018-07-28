@@ -1,6 +1,6 @@
 import color from './color';
 
-export default {
+const defaultTheme = {
 	...color,
 	borderRadius: 10,
 
@@ -28,3 +28,23 @@ export default {
 	iconSizeSmall: 28,
 	iconSizeXSmall: 20
 };
+
+class ThemeProvider {
+	localTheme = defaultTheme;
+
+	setTheme(theme) {
+		this.localTheme = {
+			...this.localTheme,
+			...theme
+		};
+	}
+
+	resetTheme() {
+		this.localTheme = defaultTheme;
+	}
+
+	get theme() {
+		return this.localTheme;
+	}
+}
+export default new ThemeProvider();

@@ -2,30 +2,28 @@ import React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-import design from '../../theme';
-
-const styles = StyleSheet.create({
-	button: {
-		borderRadius: design.borderRadius,
-		padding: design.paddingMedium,
-		backgroundColor: design.colorPrimary
-	},
-	label: {
-		fontSize: design.fontSizeMedium,
-		color: design.colorWhite
-	}
-});
+import ThemeProvider from '../../theme';
 
 const Button = props => {
-	  const { onPress, disabled, full, label } = props;
+	const styles = StyleSheet.create({
+		button: {
+			borderRadius: ThemeProvider.theme.borderRadius,
+			padding: ThemeProvider.theme.paddingMedium,
+			backgroundColor: ThemeProvider.theme.colorPrimary
+		},
+		label: {
+			fontSize: ThemeProvider.theme.fontSizeMedium,
+			color: ThemeProvider.theme.colorWhite
+		}
+	});
 
-    return(
-        <TouchableOpacity
-          style={styles.button}
-          onPress={disabled ? undefined : onPress}>
-            <Text style={styles.label}>{label}</Text>
-        </TouchableOpacity>
-    );
+	const { onPress, disabled, full, label } = props;
+
+	return (
+		<TouchableOpacity style={styles.button} onPress={disabled ? undefined : onPress}>
+			<Text style={styles.label}>{label}</Text>
+		</TouchableOpacity>
+	);
 };
 
 Button.propTypes = {
