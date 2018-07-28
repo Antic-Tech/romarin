@@ -38,22 +38,20 @@ const IconButton = props => {
 	const { name, size, onPress, iconColor, backgroundColor } = props;
 
 	return (
-		<View>
-			<TouchableOpacity
-				style={[
-					styles.button,
-					{
-						borderRadius: buttonSizes[size],
-						height: buttonSizes[size],
-						width: buttonSizes[size],
-						backgroundColor: theme[backgroundColor]
-					}
-				]}
-				onPress={onPress}
-			>
-				<MaterialIcons style={styles.icon} size={iconSizes[size]} name={name} color={theme[iconColor]} />
-			</TouchableOpacity>
-		</View>
+		<TouchableOpacity
+			style={[
+				styles.button,
+				{
+					borderRadius: buttonSizes[size],
+					height: buttonSizes[size],
+					width: buttonSizes[size],
+					backgroundColor: theme[backgroundColor]
+				}
+			]}
+			onPress={onPress}
+		>
+			<MaterialIcons style={styles.icon} size={iconSizes[size]} name={name} color={theme[iconColor]} />
+		</TouchableOpacity>
 	);
 };
 
