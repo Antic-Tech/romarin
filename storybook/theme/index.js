@@ -22,13 +22,7 @@ export default {
 	marginSmall: 8,
 	marginXSmall: 4,
 
-	buttonSizeXlarge: 100,
-	buttonSizeLarge: 84,
-	buttonSizeMedium: 68,
-	buttonSizeSmall: 52,
-	buttonSizeXSmall: 36,
-
-	iconSizeXlarge: 52,
+	iconSizeXLarge: 52,
 	iconSizeLarge: 44,
 	iconSizeMedium: 36,
 	iconSizeSmall: 28,

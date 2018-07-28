@@ -23,6 +23,7 @@
 		"android": "react-native-scripts android",
 		"ios": "react-native-scripts ios",
 		"test": "jest --coverage && ./node_modules/.bin/codecov -t 487a4b20-db1b-40a2-bea4-4a2f2756109e",
+    "localtest": "jest --coverage",
 		"storybook": "storybook start -p 7007"
 	},
 	"jest": {

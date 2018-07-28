@@ -10,9 +10,16 @@ import CenterView from '../CenterView';
 
 storiesOf('Button', module)
 	.addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-	.add('with text', () => <Button onPress={action('clicked-text')} label="Button" />)
-	.add('with some emoji', () => (
-		<Button onPress={action('clicked-emoji')}>
-			<Text>😀 😎 👍 💯</Text>
-		</Button>
-	));
+  .add('default', () => (
+    <React.Fragment>
+      <Button  />
+    </React.Fragment>
+  ))
+  .add('label prop', () => (
+    <React.Fragment>
+      <Text>label Button</Text>
+      <Button onPress={action('clicked-text')} label="Button" />
+      <Text>label Emoji</Text>
+		  <Button onPress={action('clicked-emoji')} label="😀 😎 👍 💯"/>
+    </React.Fragment>
+  ));

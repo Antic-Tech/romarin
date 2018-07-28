@@ -22,11 +22,11 @@ const styles = StyleSheet.create({
 
 const IconButton = props => {
 	const buttonSizes = {
-		xlarge: theme.buttonSizeXLarge,
-		large: theme.buttonSizeLarge,
-		medium: theme.buttonSizeMedium,
-		small: theme.buttonSizeSmall,
-		xsmall: theme.buttonSizeXSmall
+		xlarge: (theme.iconSizeXLarge * 2 - 4),
+		large: (theme.iconSizeLarge * 2 - 4),
+		medium: (theme.iconSizeMedium * 2 - 4),
+		small: (theme.iconSizeSmall * 2 - 4),
+		xsmall: (theme.iconSizeXSmall * 2 - 4)
 	};
 	const iconSizes = {
 		xlarge: theme.iconSizeXLarge,
@@ -35,32 +35,30 @@ const IconButton = props => {
 		small: theme.iconSizeSmall,
 		xsmall: theme.iconSizeXSmall
 	};
-	const { name, size, color, onPress, backgroundColor } = props;
+	const { name, size, onPress, iconColor, backgroundColor } = props;
 
 	return (
-		<View>
-			<TouchableOpacity
-				style={[
-					styles.button,
-					{
-						borderRadius: buttonSizes[size],
-						height: buttonSizes[size],
-						width: buttonSizes[size],
-						backgroundColor: theme[backgroundColor]
-					}
-				]}
-				onPress={onPress}
-			>
-				<MaterialIcons style={styles.icon} size={iconSizes[size]} name={name} color={theme[color]} />
-			</TouchableOpacity>
-		</View>
+		<TouchableOpacity
+			style={[
+				styles.button,
+				{
+					borderRadius: buttonSizes[size],
+					height: buttonSizes[size],
+					width: buttonSizes[size],
+					backgroundColor: theme[backgroundColor]
+				}
+			]}
+			onPress={onPress}
+		>
+			<MaterialIcons style={styles.icon} size={iconSizes[size]} name={name} color={theme[iconColor]} />
+		</TouchableOpacity>
 	);
 };
 
 IconButton.propTypes = {
 	name: PropTypes.string,
 	size: PropTypes.string,
-	color: PropTypes.string,
+	iconColor: PropTypes.string,
 	backgroundColor: PropTypes.string,
 	onPress: PropTypes.func
 };
@@ -68,7 +66,7 @@ IconButton.propTypes = {
 IconButton.defaultProps = {
 	name: 'android',
 	size: 'medium',
-	color: 'colorWhite',
+	iconColor: 'colorWhite',
 	backgroundColor: 'colorPrimary',
 	onPress: () => {}
 };
