@@ -2,16 +2,8 @@
 
 exports[`IconButton Snapshots renders color change correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -37,23 +29,13 @@ exports[`IconButton Snapshots renders color change correctly 1`] = `
       "width": 100,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 />
 `;
 
 exports[`IconButton Snapshots renders default correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -79,23 +61,13 @@ exports[`IconButton Snapshots renders default correctly 1`] = `
       "width": 68,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 />
 `;
 
 exports[`IconButton Snapshots renders large correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -121,23 +93,13 @@ exports[`IconButton Snapshots renders large correctly 1`] = `
       "width": 84,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 />
 `;
 
 exports[`IconButton Snapshots renders medium correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -163,23 +125,13 @@ exports[`IconButton Snapshots renders medium correctly 1`] = `
       "width": 68,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 />
 `;
 
 exports[`IconButton Snapshots renders small correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -205,23 +157,13 @@ exports[`IconButton Snapshots renders small correctly 1`] = `
       "width": 52,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 />
 `;
 
 exports[`IconButton Snapshots renders unique icon correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -247,23 +189,13 @@ exports[`IconButton Snapshots renders unique icon correctly 1`] = `
       "width": 100,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 />
 `;
 
 exports[`IconButton Snapshots renders xlarge correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -289,23 +221,13 @@ exports[`IconButton Snapshots renders xlarge correctly 1`] = `
       "width": 100,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 />
 `;
 
 exports[`IconButton Snapshots renders xsmall correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -331,7 +253,5 @@ exports[`IconButton Snapshots renders xsmall correctly 1`] = `
       "width": 36,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 />
 `;

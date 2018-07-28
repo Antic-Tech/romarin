@@ -2,16 +2,8 @@
 
 exports[`Button Snapshots renders correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -26,8 +18,6 @@ exports[`Button Snapshots renders correctly 1`] = `
       "padding": 16,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <Text
     accessible={true}
