@@ -29,7 +29,7 @@ class ButtonConatiner extends React.Component {
 	}
 
 	updateTheme() {
-		ThemeProvider.setTheme({ colorPrimary: 'red', borderRadius: 50 });
+		ThemeProvider.setTheme({ colorPrimary: 'red', buttonBorderRadius: 50 });
 		this.forceUpdate();
 	}
 

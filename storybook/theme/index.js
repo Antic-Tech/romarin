@@ -1,36 +1,13 @@
-import color from './color';
+import core from './core.theme.js';
+import button from '../stories/Button/Buttom.theme';
 
-const defaultTheme = {
-	...color,
-	borderRadius: 10,
-
-	fontSizeXLarge: 34,
-	fontSizeLarge: 28,
-	fontSizeMedium: 17,
-	fontSizeSmall: 13,
-	fontSizeXSmall: 11,
-
-	paddingXLarge: 32,
-	paddingLarge: 24,
-	paddingMedium: 16,
-	paddingSmall: 8,
-	paddingXSmall: 4,
-
-	marginXLarge: 32,
-	marginLarge: 24,
-	marginMedium: 16,
-	marginSmall: 8,
-	marginXSmall: 4,
-
-	iconSizeXLarge: 52,
-	iconSizeLarge: 44,
-	iconSizeMedium: 36,
-	iconSizeSmall: 28,
-	iconSizeXSmall: 20
+baseTheme = {
+	...core,
+	...button
 };
 
 class ThemeProvider {
-	localTheme = defaultTheme;
+	localTheme = baseTheme;
 
 	setTheme(theme) {
 		this.localTheme = {
@@ -40,7 +17,7 @@ class ThemeProvider {
 	}
 
 	resetTheme() {
-		this.localTheme = defaultTheme;
+		this.localTheme = baseTheme;
 	}
 
 	get theme() {

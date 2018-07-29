@@ -7,7 +7,7 @@ import ThemeProvider from '../../theme';
 const Button = props => {
 	const styles = StyleSheet.create({
 		button: {
-			borderRadius: ThemeProvider.theme.borderRadius,
+			borderRadius: ThemeProvider.theme.buttonBorderRadius,
 			padding: ThemeProvider.theme.paddingMedium,
 			backgroundColor: ThemeProvider.theme.colorPrimary
 		},
