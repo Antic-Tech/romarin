@@ -26,6 +26,7 @@ exports[`Button Snapshots renders correctly 1`] = `
     style={
       Object {
         "color": "#FFFFFF",
+        "fontFamily": undefined,
         "fontSize": 17,
       }
     }
