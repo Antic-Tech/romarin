@@ -1,23 +1,28 @@
-import core from './core.theme.js';
+import coreTheme from './core.theme.js';
 import button from '../stories/Button/Buttom.theme';
 
-baseTheme = {
-	...core,
-	...button
-};
+const getBaseTheme = coreTheme => ({
+	...coreTheme,
+	...button(coreTheme)
+});
 
 class ThemeProvider {
-	localTheme = baseTheme;
+	localTheme = getBaseTheme(coreTheme);
 
-	setTheme(theme) {
+	setTheme(newTheme) {
+		const updatedCore = {
+			...coreTheme,
+			...newTheme
+		};
+
 		this.localTheme = {
-			...this.localTheme,
-			...theme
+			...getBaseTheme(updatedCore),
+			...newTheme
 		};
 	}
 
 	resetTheme() {
-		this.localTheme = baseTheme;
+		this.localTheme = getBaseTheme(coreTheme);
 	}
 
 	get theme() {

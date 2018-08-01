@@ -3,29 +3,23 @@ import color from './color';
 export default {
 	...color,
 
-	borderRadius: 10,
+	coreBorderRadius: 10,
 
-	fontSizeXLarge: 34,
-	fontSizeLarge: 28,
-	fontSizeMedium: 17,
-	fontSizeSmall: 13,
-	fontSizeXSmall: 11,
+	coreFontSizeXLarge: 34,
+	coreFontSizeLarge: 28,
+	coreFontSizeMedium: 17,
+	coreFontSizeSmall: 13,
+	coreFontSizeXSmall: 11,
 
-	paddingXLarge: 32,
-	paddingLarge: 24,
-	paddingMedium: 16,
-	paddingSmall: 8,
-	paddingXSmall: 4,
+	corePaddingXLarge: 32,
+	corePaddingLarge: 24,
+	corePaddingMedium: 16,
+	corePaddingSmall: 8,
+	corePaddingXSmall: 4,
 
-	marginXLarge: 32,
-	marginLarge: 24,
-	marginMedium: 16,
-	marginSmall: 8,
-	marginXSmall: 4,
-
-	iconSizeXLarge: 52,
-	iconSizeLarge: 44,
-	iconSizeMedium: 36,
-	iconSizeSmall: 28,
-	iconSizeXSmall: 20
+	coreMarginXLarge: 32,
+	coreMarginLarge: 24,
+	coreMarginMedium: 16,
+	coreMarginSmall: 8,
+	coreMarginXSmall: 4
 };

@@ -1,14 +1,14 @@
 import React from 'react';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { TouchableOpacity, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-
+import { Text } from '../../components';
 import ThemeProvider from '../../theme';
 
 const Button = props => {
 	const styles = StyleSheet.create({
 		button: {
 			borderRadius: ThemeProvider.theme.buttonBorderRadius,
-			padding: ThemeProvider.theme.paddingMedium,
+			padding: ThemeProvider.theme.buttonPadding,
 			backgroundColor: ThemeProvider.theme.colorPrimary
 		},
 		label: {
@@ -21,7 +21,7 @@ const Button = props => {
 
 	return (
 		<TouchableOpacity style={styles.button} onPress={disabled ? undefined : onPress}>
-			<Text style={styles.label}>{label}</Text>
+			<Text color={ThemeProvider.theme.buttonTextColor}>{label}</Text>
 		</TouchableOpacity>
 	);
 };
