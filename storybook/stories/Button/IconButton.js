@@ -6,7 +6,7 @@ import ThemeProvider from '../../theme';
 
 const styles = StyleSheet.create({
 	button: {
-		margin: ThemeProvider.theme.marginSmall,
+		margin: ThemeProvider.theme.coreMarginSmall,
 		shadowColor: 'rgba(0,0,0,.4)',
 		shadowOffset: { height: 1, width: 1 },
 		shadowOpacity: 1,
@@ -21,11 +21,11 @@ const styles = StyleSheet.create({
 
 const IconButton = props => {
 	const buttonSizes = {
-		xlarge: (ThemeProvider.theme.iconSizeXLarge * 2 - 4),
-		large: (ThemeProvider.theme.iconSizeLarge * 2 - 4),
-		medium: (ThemeProvider.theme.iconSizeMedium * 2 - 4),
-		small: (ThemeProvider.theme.iconSizeSmall * 2 - 4),
-		xsmall: (ThemeProvider.theme.iconSizeXSmall * 2 - 4)
+		xlarge: ThemeProvider.theme.iconSizeXLarge * 2 - 4,
+		large: ThemeProvider.theme.iconSizeLarge * 2 - 4,
+		medium: ThemeProvider.theme.iconSizeMedium * 2 - 4,
+		small: ThemeProvider.theme.iconSizeSmall * 2 - 4,
+		xsmall: ThemeProvider.theme.iconSizeXSmall * 2 - 4
 	};
 	const iconSizes = {
 		xlarge: ThemeProvider.theme.iconSizeXLarge,
@@ -49,14 +49,11 @@ const IconButton = props => {
 			]}
 			onPress={onPress}
 		>
-      <Image
-        style={[
-            styles.icon,
-            {width: iconSizes[size]},
-            {height: iconSizes[size]}
-        ]}
-        resizeMode="cover"
-        source={source}/>
+			<Image
+				style={[styles.icon, { width: iconSizes[size] }, { height: iconSizes[size] }]}
+				resizeMode="cover"
+				source={source}
+			/>
 		</TouchableOpacity>
 	);
 };
@@ -64,29 +61,24 @@ const IconButton = props => {
 IconButton.propTypes = {
 	size: PropTypes.string,
 	backgroundColor: PropTypes.string,
-  onPress: PropTypes.func,
+	onPress: PropTypes.func,
 
-  //Taken from official ImageSourcePropType: https://github.com/facebook/react-native/blob/master/Libraries/Image/ImageSourcePropType.js
-  //Note: We don't support multiple images
-  source: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.shape({
-        uri: PropTypes.string,
-        bundle: PropTypes.string,
-        method: PropTypes.string,
-        headers: PropTypes.objectOf(PropTypes.string),
-        body: PropTypes.string,
-        cache: PropTypes.oneOf([
-            'default',
-            'reload',
-            'force-cache',
-            'only-if-cached',
-        ]),
-        width: PropTypes.number,
-        height: PropTypes.number,
-        scale: PropTypes.number
-    })
-  ])
+	//Taken from official ImageSourcePropType: https://github.com/facebook/react-native/blob/master/Libraries/Image/ImageSourcePropType.js
+	//Note: We don't support multiple images
+	source: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.shape({
+			uri: PropTypes.string,
+			bundle: PropTypes.string,
+			method: PropTypes.string,
+			headers: PropTypes.objectOf(PropTypes.string),
+			body: PropTypes.string,
+			cache: PropTypes.oneOf(['default', 'reload', 'force-cache', 'only-if-cached']),
+			width: PropTypes.number,
+			height: PropTypes.number,
+			scale: PropTypes.number
+		})
+	])
 };
 
 IconButton.defaultProps = {

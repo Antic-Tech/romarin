@@ -1,23 +1,25 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 import ThemeProvider from '../../theme';
 
 const RomarinText = props => {
 	const fontSizes = {
-		xlarge: ThemeProvider.theme.fontSizeXLarge,
-		large: ThemeProvider.theme.fontSizeLarge,
-		medium: ThemeProvider.theme.fontSizeMedium,
-		small: ThemeProvider.theme.fontSizeSmall,
-		xsmall: ThemeProvider.theme.fontSizeXSmall
+		xlarge: ThemeProvider.theme.coreFontSizeXLarge,
+		large: ThemeProvider.theme.coreFontSizeLarge,
+		medium: ThemeProvider.theme.coreFontSizeMedium,
+		small: ThemeProvider.theme.coreFontSizeSmall,
+		xsmall: ThemeProvider.theme.coreFontSizeXSmall
 	};
-	const { size, muted, children } = props;
+	const { size, muted, color, children } = props;
 
+	const textColor = color ? color : muted ? ThemeProvider.theme.textColorMuted : ThemeProvider.theme.textColor;
 	return (
 		<Text
 			style={{
 				fontSize: fontSizes[size],
-				color: muted ? ThemeProvider.theme.textColorMuted : ThemeProvider.theme.textColor
+				fontFamily: ThemeProvider.theme.textFontFamily,
+				color: textColor
 			}}
 		>
 			{children}

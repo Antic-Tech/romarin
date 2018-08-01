@@ -1,46 +1,30 @@
-import color from './color';
+import coreTheme from './core.theme.js';
+import buttonTheme from '../stories/Button/Button.theme';
+import textTheme from '../stories/Text/Text.theme';
 
-const defaultTheme = {
-	...color,
-	borderRadius: 10,
-
-	fontSizeXLarge: 34,
-	fontSizeLarge: 28,
-	fontSizeMedium: 17,
-	fontSizeSmall: 13,
-	fontSizeXSmall: 11,
-
-	paddingXLarge: 32,
-	paddingLarge: 24,
-	paddingMedium: 16,
-	paddingSmall: 8,
-	paddingXSmall: 4,
-
-	marginXLarge: 32,
-	marginLarge: 24,
-	marginMedium: 16,
-	marginSmall: 8,
-	marginXSmall: 4,
-
-	iconSizeXLarge: 52,
-	iconSizeLarge: 44,
-	iconSizeMedium: 36,
-	iconSizeSmall: 28,
-	iconSizeXSmall: 20
-};
+const getBaseTheme = coreTheme => ({
+	...coreTheme,
+	...buttonTheme(coreTheme),
+	...textTheme(coreTheme)
+});
 
 class ThemeProvider {
-	localTheme = defaultTheme;
+	localTheme = getBaseTheme(coreTheme);
 
-	setTheme(theme) {
+	setTheme(newTheme) {
+		const updatedCore = {
+			...coreTheme,
+			...newTheme
+		};
+
 		this.localTheme = {
-			...this.localTheme,
-			...theme
+			...getBaseTheme(updatedCore),
+			...newTheme
 		};
 	}
 
 	resetTheme() {
-		this.localTheme = defaultTheme;
+		this.localTheme = getBaseTheme(coreTheme);
 	}
 
 	get theme() {
