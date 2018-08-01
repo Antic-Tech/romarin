@@ -1,9 +1,11 @@
 import coreTheme from './core.theme.js';
-import button from '../stories/Button/Buttom.theme';
+import buttonTheme from '../stories/Button/Button.theme';
+import textTheme from '../stories/Text/Text.theme';
 
 const getBaseTheme = coreTheme => ({
 	...coreTheme,
-	...button(coreTheme)
+	...buttonTheme(coreTheme),
+	...textTheme(coreTheme)
 });
 
 class ThemeProvider {

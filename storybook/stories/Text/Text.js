@@ -18,6 +18,7 @@ const RomarinText = props => {
 		<Text
 			style={{
 				fontSize: fontSizes[size],
+				fontFamily: ThemeProvider.theme.textFontFamily,
 				color: textColor
 			}}
 		>
