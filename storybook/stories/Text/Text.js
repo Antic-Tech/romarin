@@ -11,8 +11,7 @@ const RomarinText = props => {
 		small: ThemeProvider.theme.coreFontSizeSmall,
 		xsmall: ThemeProvider.theme.coreFontSizeXSmall
 	};
-	const { size, muted, color, children } = props;
-
+	const { size, muted, color, children, style = {} } = props;
 	const textColor = color ? color : muted ? ThemeProvider.theme.textColorMuted : ThemeProvider.theme.textColor;
 	return (
 		<Text

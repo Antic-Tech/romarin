@@ -12,8 +12,7 @@ const Button = props => {
 			backgroundColor: ThemeProvider.theme.colorPrimary
 		},
 		label: {
-			fontSize: ThemeProvider.theme.fontSizeMedium,
-			color: ThemeProvider.theme.colorWhite
+			textAlign: 'center'
 		}
 	});
 
@@ -21,7 +20,9 @@ const Button = props => {
 
 	return (
 		<TouchableOpacity style={styles.button} onPress={disabled ? undefined : onPress}>
-			<Text color={ThemeProvider.theme.buttonTextColor}>{label}</Text>
+			<Text style={styles.label} color={ThemeProvider.theme.buttonTextColor}>
+				{label}
+			</Text>
 		</TouchableOpacity>
 	);
 };
