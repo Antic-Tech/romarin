@@ -12,9 +12,11 @@ const firstAndFive = {
 	colorPrimary: '#30bce0',
 	textColor: '#22233a',
 	textFontFamily: 'Exo 2',
-	coreBorderRadius: 20,
-	buttonBorderRadius: 3
+	coreBorderRadius: 3,
+	inputBorderColor: '#aeaeae',
+	inputBorderWidth: 2
 };
+
 const thinkShare = {
 	colorRed: '#de5241',
 	colorOrange: '#ea953e',
