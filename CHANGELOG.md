@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.9"></a>
+## [1.3.9](https://github.com/luigiinred/romarin/compare/v1.3.8...v1.3.9) (2018-08-08)
+
+
+
 <a name="1.3.8"></a>
 ## [1.3.8](https://github.com/luigiinred/romarin/compare/v1.3.7...v1.3.8) (2018-08-08)
 
