@@ -7,7 +7,7 @@ exports[`Input Snapshots renders correctly 1`] = `
   size="medium"
   style={
     Object {
-      "borderColor": "#000000",
+      "borderColor": "#999999",
       "borderRadius": 10,
       "borderWidth": 1,
       "flexDirection": "row",

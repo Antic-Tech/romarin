@@ -15,11 +15,14 @@ const RomarinText = props => {
 	const textColor = color ? color : muted ? ThemeProvider.theme.textColorMuted : ThemeProvider.theme.textColor;
 	return (
 		<Text
-			style={{
-				fontSize: fontSizes[size],
-				fontFamily: ThemeProvider.theme.textFontFamily,
-				color: textColor
-			}}
+			style={[
+				{
+					fontSize: fontSizes[size],
+					fontFamily: ThemeProvider.theme.textFontFamily,
+					color: textColor
+				},
+				style
+			]}
 		>
 			{children}
 		</Text>

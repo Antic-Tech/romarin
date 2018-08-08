@@ -12,6 +12,7 @@ let colors = {
 	colorLightGray: '#999999',
 	colorGray: '#666666',
 	colorDarkGray: '#333333',
+	colorDarkerGray: '#181818',
 	colorBlack: '#000000'
 };
 
