@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import { Text } from '../../components';
+import { Touchable, Text } from '../../components';
 import ThemeProvider from '../../theme';
 
 const Button = props => {
@@ -19,11 +19,11 @@ const Button = props => {
 	const { onPress, disabled, full, label } = props;
 
 	return (
-		<TouchableOpacity style={styles.button} onPress={disabled ? undefined : onPress}>
+		<Touchable type="opacity" style={styles.button} onPress={disabled ? undefined : onPress}>
 			<Text style={styles.label} color={ThemeProvider.theme.buttonTextColor}>
 				{label}
 			</Text>
-		</TouchableOpacity>
+		</Touchable>
 	);
 };
 

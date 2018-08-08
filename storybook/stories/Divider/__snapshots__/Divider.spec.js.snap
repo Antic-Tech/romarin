@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider Snapshots renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#181818",
+        "flex": 1,
+        "height": 0.5,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Divider Snapshots renders correctly with label 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "paddingBottom": undefined,
+      "paddingVertical": undefined,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#181818",
+        "flex": 1,
+        "height": 0.5,
+      }
+    }
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontFamily": undefined,
+          "fontSize": 13,
+        },
+        Object {
+          "paddingLeft": 8,
+          "paddingRight": 8,
+        },
+      ]
+    }
+  >
+    Label
+  </Text>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#181818",
+        "flex": 1,
+        "height": 0.5,
+      }
+    }
+  />
+</View>
+`;

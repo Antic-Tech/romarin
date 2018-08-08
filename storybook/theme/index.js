@@ -2,12 +2,16 @@ import coreTheme from './core.theme.js';
 import buttonTheme from '../stories/Button/Button.theme';
 import textTheme from '../stories/Text/Text.theme';
 import inputTheme from '../stories/Input/Input.theme';
+import touchableTheme from '../stories/Touchable/Touchable.theme';
+import dividerTheme from '../stories/Divider/Divider.theme';
 
 const getBaseTheme = coreTheme => ({
 	...coreTheme,
 	...buttonTheme(coreTheme),
 	...textTheme(coreTheme),
-	...inputTheme(coreTheme)
+	...inputTheme(coreTheme),
+	...touchableTheme(coreTheme),
+	...dividerTheme(coreTheme)
 });
 
 class ThemeProvider {

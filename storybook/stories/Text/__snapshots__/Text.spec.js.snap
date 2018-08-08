@@ -6,11 +6,14 @@ exports[`Text Snapshots renders correctly 1`] = `
   allowFontScaling={true}
   ellipsizeMode="tail"
   style={
-    Object {
-      "color": "#000000",
-      "fontFamily": undefined,
-      "fontSize": 17,
-    }
+    Array [
+      Object {
+        "color": "#000000",
+        "fontFamily": undefined,
+        "fontSize": 17,
+      },
+      Object {},
+    ]
   }
 >
   Text
@@ -23,11 +26,14 @@ exports[`Text Snapshots renders large correctly 1`] = `
   allowFontScaling={true}
   ellipsizeMode="tail"
   style={
-    Object {
-      "color": "#000000",
-      "fontFamily": undefined,
-      "fontSize": 28,
-    }
+    Array [
+      Object {
+        "color": "#000000",
+        "fontFamily": undefined,
+        "fontSize": 28,
+      },
+      Object {},
+    ]
   }
 >
   Text
@@ -40,11 +46,14 @@ exports[`Text Snapshots renders medium correctly 1`] = `
   allowFontScaling={true}
   ellipsizeMode="tail"
   style={
-    Object {
-      "color": "#000000",
-      "fontFamily": undefined,
-      "fontSize": 17,
-    }
+    Array [
+      Object {
+        "color": "#000000",
+        "fontFamily": undefined,
+        "fontSize": 17,
+      },
+      Object {},
+    ]
   }
 >
   Text
@@ -57,11 +66,14 @@ exports[`Text Snapshots renders muted correctly 1`] = `
   allowFontScaling={true}
   ellipsizeMode="tail"
   style={
-    Object {
-      "color": "#999999",
-      "fontFamily": undefined,
-      "fontSize": 17,
-    }
+    Array [
+      Object {
+        "color": "#999999",
+        "fontFamily": undefined,
+        "fontSize": 17,
+      },
+      Object {},
+    ]
   }
 >
   Text
@@ -74,11 +86,14 @@ exports[`Text Snapshots renders small correctly 1`] = `
   allowFontScaling={true}
   ellipsizeMode="tail"
   style={
-    Object {
-      "color": "#000000",
-      "fontFamily": undefined,
-      "fontSize": 13,
-    }
+    Array [
+      Object {
+        "color": "#000000",
+        "fontFamily": undefined,
+        "fontSize": 13,
+      },
+      Object {},
+    ]
   }
 >
   Text
@@ -91,11 +106,14 @@ exports[`Text Snapshots renders xlarge correctly 1`] = `
   allowFontScaling={true}
   ellipsizeMode="tail"
   style={
-    Object {
-      "color": "#000000",
-      "fontFamily": undefined,
-      "fontSize": 34,
-    }
+    Array [
+      Object {
+        "color": "#000000",
+        "fontFamily": undefined,
+        "fontSize": 34,
+      },
+      Object {},
+    ]
   }
 >
   Text
