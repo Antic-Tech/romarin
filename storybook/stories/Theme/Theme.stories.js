@@ -1,17 +1,13 @@
-import React from 'react';
-import { Text, View } from 'react-native';
-
 import { storiesOf } from '@storybook/react-native';
-import { action } from '@storybook/addon-actions';
-
+import React from 'react';
+import { View } from 'react-native';
+import ThemeProvider from '../../theme';
 import Button from '../Button/Button';
 import CenterView from '../CenterView';
-import ThemeProvider from '../../theme';
 
 const firstAndFive = {
 	colorPrimary: '#30bce0',
 	textColor: '#22233a',
-	textFontFamily: 'Exo 2',
 	coreBorderRadius: 3,
 	inputBorderColor: '#aeaeae',
 	inputBorderWidth: 2
@@ -27,15 +23,16 @@ const thinkShare = {
 	colorPurple: '#95559a',
 	textFontFamily: 'Chalkduster',
 	colorPrimary: '#4568ac',
-	buttonBorderRadius: 4
+	coreBorderRadius: 0
 };
 const routineBuilder = {
 	colorPrimary: 'red',
-	coreBorderRadius: 12
+	coreBorderRadius: 12,
+	checkboxBorderRadius: 4
 };
 
 storiesOf('Theme', module)
-	.addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+	.addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
 	.add('Update theme', () => <ButtonConatiner />);
 
 class ButtonConatiner extends React.Component {

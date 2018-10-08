@@ -1,19 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input Snapshots renders correctly 1`] = `
-<TextInput
-  allowFontScaling={true}
-  muted={false}
-  size="medium"
+<View
   style={
     Object {
-      "borderColor": "#999999",
+      "alignItems": "center",
+      "borderColor": "#dedede",
       "borderRadius": 10,
       "borderWidth": 1,
       "flexDirection": "row",
       "margin": 8,
       "padding": 8,
+      "paddingHorizontal": 8,
     }
   }
-/>
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontFamily": undefined,
+          "fontSize": 17,
+          "fontWeight": "bold",
+        },
+        Object {
+          "color": undefined,
+          "fontSize": 17,
+          "margin": 4,
+          "marginBottom": undefined,
+          "marginHorizontal": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+          "marginVertical": undefined,
+          "padding": undefined,
+          "paddingBottom": undefined,
+          "paddingHorizontal": undefined,
+          "paddingLeft": undefined,
+          "paddingRight": undefined,
+          "paddingTop": undefined,
+          "paddingVertical": undefined,
+          "width": 80,
+        },
+      ]
+    }
+  >
+    
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    muted={false}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    selectionColor="#2C7CF6"
+    size="medium"
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "fontSize": 17,
+      }
+    }
+  />
+</View>
 `;

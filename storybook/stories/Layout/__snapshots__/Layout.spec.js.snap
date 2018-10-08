@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Column Snapshots renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": undefined,
+        "flex": 0,
+        "flexDirection": "column",
+      },
+      Object {
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "padding": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "paddingVertical": undefined,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Row Snapshots renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 0,
+        "flexDirection": "row",
+        "justifyContent": undefined,
+      },
+      Object {
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "padding": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "paddingVertical": undefined,
+      },
+    ]
+  }
+/>
+`;

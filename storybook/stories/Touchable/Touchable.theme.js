@@ -1,4 +1,4 @@
-export default core => ({
+export default (core) => ({
 	touchableActiveOpacity: 0.2,
-	touchableUnderlayColor: core.colorLightGray
+	touchableUnderlayColor: '#00000010'
 });

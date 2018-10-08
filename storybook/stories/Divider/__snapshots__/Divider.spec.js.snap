@@ -53,10 +53,23 @@ exports[`Divider Snapshots renders correctly with label 1`] = `
           "color": "#000000",
           "fontFamily": undefined,
           "fontSize": 13,
+          "fontWeight": undefined,
         },
         Object {
+          "margin": undefined,
+          "marginBottom": undefined,
+          "marginHorizontal": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+          "marginVertical": undefined,
+          "padding": undefined,
+          "paddingBottom": undefined,
+          "paddingHorizontal": undefined,
           "paddingLeft": 8,
           "paddingRight": 8,
+          "paddingTop": undefined,
+          "paddingVertical": undefined,
         },
       ]
     }

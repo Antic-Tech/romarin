@@ -1,9 +1,7 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { PixelRatio, View } from 'react-native';
 import { Text } from '../../components';
-
 import ThemeProvider from '../../theme';
-import { PixelRatio } from 'react-native';
 
 const getDividerStyle = () => ({
 	backgroundColor: ThemeProvider.theme.dividerColor,

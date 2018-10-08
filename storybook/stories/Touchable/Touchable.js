@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { TouchableOpacity, TouchableHighlight, TouchableWithoutFeedback } from 'react-native';
 import debounce from 'lodash/debounce';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { TouchableHighlight, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
 import ThemeProvider from '../../theme';
 
 const Touchable = ({ children, debounceTrailing, debounceWait, onPress, type, ...props }) => {
@@ -39,11 +39,11 @@ const Touchable = ({ children, debounceTrailing, debounceWait, onPress, type, ..
 };
 
 Touchable.propTypes = {
-	type: PropTypes.oneOf(['opacity', 'highlight', 'none']),
+	type: PropTypes.oneOf([ 'opacity', 'highlight', 'none' ]),
 	debounceWait: PropTypes.number,
 	debounceTrailing: PropTypes.bool,
 	onPress: PropTypes.func,
-	children: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string]).isRequired
+	children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object, PropTypes.string ]).isRequired
 };
 
 Touchable.defaultProps = {

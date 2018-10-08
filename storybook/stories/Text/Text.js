@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Text } from 'react-native';
-import PropTypes from 'prop-types';
 import ThemeProvider from '../../theme';
+import { withCommonProps } from '../../utils/withCommonProps';
 
-const RomarinText = props => {
+const RomarinText = (props) => {
 	const fontSizes = {
 		xlarge: ThemeProvider.theme.coreFontSizeXLarge,
 		large: ThemeProvider.theme.coreFontSizeLarge,
@@ -11,7 +12,7 @@ const RomarinText = props => {
 		small: ThemeProvider.theme.coreFontSizeSmall,
 		xsmall: ThemeProvider.theme.coreFontSizeXSmall
 	};
-	const { size, muted, color, children, style = {} } = props;
+	const { size, muted, color, weight, children, style = {} } = props;
 	const textColor = color ? color : muted ? ThemeProvider.theme.textColorMuted : ThemeProvider.theme.textColor;
 	return (
 		<Text
@@ -19,7 +20,8 @@ const RomarinText = props => {
 				{
 					fontSize: fontSizes[size],
 					fontFamily: ThemeProvider.theme.textFontFamily,
-					color: textColor
+					color: textColor,
+					fontWeight: weight
 				},
 				style
 			]}
@@ -39,4 +41,4 @@ RomarinText.defaultProps = {
 	muted: false
 };
 
-export { RomarinText as default };
+export default withCommonProps(RomarinText);

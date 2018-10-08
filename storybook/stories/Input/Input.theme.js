@@ -1,7 +1,11 @@
-export default core => ({
+export default (core) => ({
 	inputBorderRadius: core.coreBorderRadius,
 	inputPadding: core.corePaddingSmall,
+	inputPaddingHorizontal: core.corePaddingSmall,
 	inputMargin: core.corePaddingSmall,
-	inputBorderColor: core.colorLightGray,
+	inputLabelMargin: core.corePaddingXSmall,
+	inputBorderColor: core.colorLighterGray,
+	focusedInputBorderColor: core.colorPrimary,
+	focusedInputLabelColor: core.colorPrimary,
 	inputBorderWidth: 1
 });
