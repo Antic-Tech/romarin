@@ -18,4 +18,12 @@ storiesOf('Button', module)
 			<Text>label Emoji</Text>
 			<Button onPress={action('clicked-emoji')} label="😀 😎 👍 💯" />
 		</React.Fragment>
-	));
+	))
+	.add('outline button', () => (
+		<React.Fragment>
+			<Text>{ThemeProvider.theme.colorPrimary}</Text>
+			<Button outline onPress={this.updateTheme} label="Outline Button" />
+			<Text>label Emoji</Text>
+			<Button outline onPress={action('clicked-emoji')} label="😀 😎 👍 💯" />
+		</React.Fragment>
+	))

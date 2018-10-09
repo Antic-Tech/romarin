@@ -4,6 +4,7 @@ export default {
 	...color,
 
 	coreBorderRadius: 10,
+	coreBorderWidth: 2,
 
 	coreFontSizeXLarge: 34,
 	coreFontSizeLarge: 28,
@@ -23,5 +24,5 @@ export default {
 	coreMarginMedium: 16,
 	coreMarginSmall: 8,
 	coreMarginXSmall: 4,
-	corePaddingXXSmall: 2
+	corePaddingXXSmall: 2,
 };

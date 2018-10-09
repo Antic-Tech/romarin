@@ -9,18 +9,27 @@ const Button = props => {
 		button: {
 			borderRadius: ThemeProvider.theme.buttonBorderRadius,
 			padding: ThemeProvider.theme.buttonPadding,
-			backgroundColor: ThemeProvider.theme.colorPrimary
+			backgroundColor: ThemeProvider.theme.colorPrimary,
+			borderColor: ThemeProvider.theme.colorPrimary,
+			borderWidth: ThemeProvider.theme.buttonBorderWidth,
 		},
 		label: {
 			textAlign: 'center'
+		},
+		buttonOutline: {
+			borderRadius: ThemeProvider.theme.buttonBorderRadius,
+			padding: ThemeProvider.theme.buttonPadding,
+			borderColor: ThemeProvider.theme.colorPrimary,
+			borderWidth: ThemeProvider.theme.buttonBorderWidth,
+			backgroundColor: "transparent"
 		}
 	});
 
-	const { onPress, disabled, full, label } = props;
+	const { onPress, disabled, full, label, outline } = props;
 
 	return (
-		<Touchable type="opacity" style={styles.button} onPress={disabled ? undefined : onPress}>
-			<Text style={styles.label} color={ThemeProvider.theme.buttonTextColor}>
+		<Touchable type="opacity" style={outline ? styles.buttonOutline : styles.button} onPress={disabled ? undefined : onPress}>
+			<Text style={styles.label} color={outline ? ThemeProvider.theme.colorPrimary : ThemeProvider.theme.buttonTextColor}>
 				{label}
 			</Text>
 		</Touchable>
@@ -28,6 +37,7 @@ const Button = props => {
 };
 
 Button.propTypes = {
+	outline: PropTypes.bool,
 	onPress: PropTypes.func,
 	disabled: PropTypes.bool,
 	full: PropTypes.bool,
