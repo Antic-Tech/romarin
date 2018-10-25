@@ -1,7 +1,8 @@
-export default core => ({
+export default (core) => ({
 	buttonBorderRadius: core.coreBorderRadius,
 	buttonPadding: core.corePaddingMedium,
-	buttonTextColor: core.colorWhite,
+	buttonLabelColor: core.colorWhite,
+	buttonLabelWeight: '500',
 	iconSizeXLarge: 52,
 	iconSizeLarge: 44,
 	iconSizeMedium: 36,

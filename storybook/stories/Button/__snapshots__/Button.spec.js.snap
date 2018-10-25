@@ -32,6 +32,7 @@ exports[`Button Snapshots renders correctly 1`] = `
           "fontWeight": undefined,
         },
         Object {
+          "fontWeight": "500",
           "margin": undefined,
           "marginBottom": undefined,
           "marginHorizontal": undefined,

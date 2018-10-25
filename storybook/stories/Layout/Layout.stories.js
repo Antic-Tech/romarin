@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
-import { Checkbox, Column, Row, Text, Touchable } from '../../components';
+import { Checkbox, Column, Page, Row, Text, Touchable } from '../../components';
 import Divider from '../Divider/Divider';
 
-storiesOf('Layout', module).add('List item', () => (
+storiesOf('Layout', module).addDecorator((getStory) => <Page>{getStory()}</Page>).add('List item', () => (
 	<React.Fragment>
 		<Touchable type="highlight">
 			<Row>

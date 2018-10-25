@@ -42,6 +42,7 @@ class Input extends Component {
 					borderColor: isFocused
 						? ThemeProvider.theme.focusedInputBorderColor
 						: ThemeProvider.theme.inputBorderColor,
+					backgroundColor: ThemeProvider.theme.inputBackgroundColor,
 					margin: ThemeProvider.theme.inputMargin,
 					padding: ThemeProvider.theme.inputPadding,
 					paddingHorizontal: ThemeProvider.theme.inputPaddingHorizontal,
@@ -55,7 +56,9 @@ class Input extends Component {
 					style={{
 						width: 80,
 						margin: ThemeProvider.theme.inputLabelMargin,
-						color: isFocused ? ThemeProvider.theme.focusedInputLabelColor : undefined,
+						color: isFocused
+							? ThemeProvider.theme.focusedInputLabelColor
+							: ThemeProvider.theme.inputLabelColor,
 						fontSize: ThemeProvider.theme.coreFontSizeMedium
 						// textAlign: 'right'
 					}}
@@ -67,9 +70,11 @@ class Input extends Component {
 					style={{
 						flexDirection: 'row',
 						flex: 1,
-						fontSize: ThemeProvider.theme.coreFontSizeMedium
+						fontSize: ThemeProvider.theme.coreFontSizeMedium,
+						color: ThemeProvider.theme.inputTextColor
 					}}
 					selectionColor={ThemeProvider.theme.focusedInputLabelColor}
+					placeholderTextColor={ThemeProvider.theme.inputPlaceholderColor}
 					onFocus={this.onFocus}
 					onBlur={this.onBlur}
 					{...props}

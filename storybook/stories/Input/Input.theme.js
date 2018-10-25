@@ -7,5 +7,7 @@ export default (core) => ({
 	inputBorderColor: core.colorLighterGray,
 	focusedInputBorderColor: core.colorPrimary,
 	focusedInputLabelColor: core.colorPrimary,
+	inputLabelColor: core.colorPrimary,
+	inputTextColor: core.colorPrimary,
 	inputBorderWidth: 1
 });
