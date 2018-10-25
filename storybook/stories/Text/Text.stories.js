@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
-import CenterView from '../CenterView';
+import { Page } from '../../components';
 import Text from './Text';
 
 storiesOf('Text', module)
-	.addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
+	.addDecorator((getStory) => <Page padded>{getStory()}</Page>)
 	.add('default', () => (
 		<React.Fragment>
 			<Text>default text</Text>

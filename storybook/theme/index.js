@@ -2,12 +2,14 @@ import buttonTheme from '../stories/Button/Button.theme';
 import checkboxTheme from '../stories/Checkbox/Checkbox.theme';
 import dividerTheme from '../stories/Divider/Divider.theme';
 import inputTheme from '../stories/Input/Input.theme';
+import pageTheme from '../stories/Page/Page.theme';
 import textTheme from '../stories/Text/Text.theme';
 import touchableTheme from '../stories/Touchable/Touchable.theme';
 import coreTheme from './core.theme.js';
 
 const getBaseTheme = (coreTheme) => ({
 	...coreTheme,
+	...pageTheme(coreTheme),
 	...checkboxTheme(coreTheme),
 	...buttonTheme(coreTheme),
 	...textTheme(coreTheme),
