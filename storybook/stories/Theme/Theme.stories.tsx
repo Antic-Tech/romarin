@@ -1,65 +1,92 @@
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import { View } from 'react-native';
-import { Page } from '../../components';
+import { Page, Text } from '../../components';
+import { Theme } from '../../definitions/Theme';
 import ThemeProvider from '../../theme';
 import Button from '../Button/Button';
 
-const firstAndFive = {
-	colorPrimary: '#30bce0',
-	textColor: '#22233a',
-	coreBorderRadius: 3,
-	inputBorderColor: '#aeaeae',
-	inputBorderWidth: 2
+const firstAndFive: Theme = {
+	base: {
+		colorPrimary: '#30bce0',
+		textColor: '#22233a',
+		borderRadius: 3,
+	},
+	input: {
+		borderColor: '#aeaeae',
+		borderWidth: 2
+
+	}
 };
 
-const thinkShare = {
-	colorRed: '#de5241',
-	colorOrange: '#ea953e',
-	colorYellow: '#f6e84f',
-	colorGreen: '#97c360',
-	colorTeal: '#4c98c9',
-	colorBlue: '#4568ac',
-	colorPurple: '#95559a',
-	textFontFamily: 'Chalkduster',
-	colorPrimary: '#4568ac',
-	coreBorderRadius: 0
+const thinkShare: Theme = {
+	base: {
+		colorRed: '#de5241',
+		colorOrange: '#ea953e',
+		colorYellow: '#f6e84f',
+		colorGreen: '#97c360',
+		colorTeal: '#4c98c9',
+		colorBlue: '#4568ac',
+		colorPurple: '#95559a',
+		textFontFamily: 'Chalkduster',
+		colorPrimary: '#4568ac',
+		borderRadius: 0
+	},
+	pageBackgroundColor: '#e2e2e2',
+
 };
 
-const routineBuilder = {
+const routineBuilder: Theme = {
 	colorPrimary: 'red',
 	coreBorderRadius: 12,
 	checkboxBorderRadius: 4
 };
 
-const weightUp = {
-	colorPrimary: '#e4ca63',
-	coreBorderRadius: 30,
+const weightUp: Theme = {
+	base:{
+		colorPrimary: '#e4ca63',
+		borderRadius: 30,
+
+	},
+	page: {
+		backgroundColor: '#2c2e34',
+		padding:0,
+	},
+	button:{
+		labelWeight: 'bold',
+	},
+	text:{
+		color: '#dedede',
+		colorMuted: '#A4A4A4',
+	},
 	checkboxBorderRadius: 4,
-	pageBackgroundColor: '#2c2e34',
-	textColor: '#dedede',
-	textColorMuted: '#A4A4A4',
 	dividerColor: '#64666c',
 	inputBorderWidth: 0,
 	inputBackgroundColor: '#22242b',
 	inputTextColor: '#dedede',
 	inputLabelColor: '#dedede',
 	inputPlaceholderColor: '#444444',
-	buttonLabelWeight: 'bold'
 };
 
-const purple = {
-	colorPrimary: 'rgb(103, 56, 237)',
-	coreBorderRadius: 12,
+const purple: Theme = {
+	base:{
+		colorPrimary: 'rgb(103, 56, 237)',
+		borderRadius: 12,
+
+		fontSizeXLarge: 24,
+		fontSizeLarge: 20,
+		fontSizeMedium: 16,
+		fontSizeSmall: 14,
+		fontSizeXSmall: 12,
+		fontFamily: 'Comic Sans',
+	},
 	checkboxSize: 20,
 	checkboxBorderRadius: 8,
 	checkboxBorderColor: 'rgb(95, 95, 107)',
 
-	coreFontSizeXLarge: 24,
-	coreFontSizeLarge: 20,
-	coreFontSizeMedium: 16,
-	coreFontSizeSmall: 14,
-	coreFontSizeXSmall: 12
+
+	buttonLabelWeight: 'bold',
+
 };
 
 storiesOf('Theme', module).add('Update theme', () => <ButtonConatiner />);
@@ -71,7 +98,7 @@ class ButtonConatiner extends React.Component {
 		this.resetTheme = this.resetTheme.bind(this);
 	}
 
-	updateTheme(theme) {
+	updateTheme(theme: Theme) {
 		ThemeProvider.setTheme(theme);
 		this.forceUpdate();
 	}
@@ -95,6 +122,9 @@ class ButtonConatiner extends React.Component {
 				<Button onPress={() => this.updateTheme(weightUp)} label="Weight Up" />
 				<View style={{ height: 16 }} />
 				<Button onPress={() => this.updateTheme(purple)} label="Purple" />
+				<Text>
+					{JSON.stringify(ThemeProvider.theme,null,2)}
+				</Text>
 			</Page>
 		);
 	}
