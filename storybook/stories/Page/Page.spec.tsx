@@ -1,12 +1,11 @@
 import React from 'react';
 import { verifySnapshot } from '../../utils/testUtils';
-import Checkbox from './Checkbox';
+import Page from './Page';
 
-describe('Checkbox', () => {
+describe('Page', () => {
 	describe('Snapshots', () => {
 		it('renders correctly', () => {
-			verifySnapshot(<Checkbox />);
-			verifySnapshot(<Checkbox checked />);
+			verifySnapshot(<Page />);
 		});
 	});
 });

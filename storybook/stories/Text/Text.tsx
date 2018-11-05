@@ -6,20 +6,20 @@ import { withCommonProps } from '../../utils/withCommonProps';
 
 const RomarinText = (props) => {
 	const fontSizes = {
-		xlarge: ThemeProvider.theme.coreFontSizeXLarge,
-		large: ThemeProvider.theme.coreFontSizeLarge,
-		medium: ThemeProvider.theme.coreFontSizeMedium,
-		small: ThemeProvider.theme.coreFontSizeSmall,
-		xsmall: ThemeProvider.theme.coreFontSizeXSmall
+		xlarge: ThemeProvider.theme!.base!.fontSizeXLarge,
+		large: ThemeProvider.theme!.base!.fontSizeLarge,
+		medium: ThemeProvider.theme!.base!.fontSizeMedium,
+		small: ThemeProvider.theme!.base!.fontSizeSmall,
+		xsmall: ThemeProvider.theme!.base!.fontSizeXSmall
 	};
 	const { size, muted, color, weight, children, style = {} } = props;
-	const textColor = color ? color : muted ? ThemeProvider.theme.textColorMuted : ThemeProvider.theme.textColor;
+	const textColor = color ? color : muted ? ThemeProvider.theme.text.colorMuted : ThemeProvider.theme.text.color;
 	return (
 		<Text
 			style={[
 				{
 					fontSize: fontSizes[size],
-					fontFamily: ThemeProvider.theme.textFontFamily,
+					fontFamily: ThemeProvider.theme.fontFamily,
 					color: textColor,
 					fontWeight: weight
 				},

@@ -9,7 +9,7 @@ import Button from './Button';
 storiesOf('Button', module).addDecorator((getStory) => <Page padded>{getStory()}</Page>).add('basic button', () => (
 	<React.Fragment>
 		<Text>{ThemeProvider.theme.colorPrimary}</Text>
-		<Button onPress={this.updateTheme} label="Button" />
+		<Button onPress={()=>{}} label="Button" />
 		<Text>label Emoji</Text>
 		<Button onPress={action('clicked-emoji')} label="😀 😎 👍 💯" />
 	</React.Fragment>

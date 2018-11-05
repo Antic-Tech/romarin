@@ -10,8 +10,8 @@ export default class Checkbox extends React.Component {
 		return (
 			<ScrollView
 				style={{
-					backgroundColor: ThemeProvider.theme.pageBackgroundColor,
-					padding: padded ? ThemeProvider.theme.pagePadding : undefined
+					backgroundColor: ThemeProvider.theme.page.backgroundColor,
+					padding: padded ? ThemeProvider.theme.page.padding : undefined
 				}}
 				{...props}
 			>
