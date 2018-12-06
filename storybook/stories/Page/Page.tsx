@@ -1,17 +1,17 @@
 // import Icon from '@components/Icon/Icon.component';
 import React from 'react';
 import { ScrollView } from 'react-native';
-import ThemeProvider from '../../theme';
+import { withTheme } from '../../theme';
 
-export default class Checkbox extends React.Component {
+class Page extends React.Component {
 	render() {
-		const { padded, children, ...props } = this.props;
+		const { padded, theme, children, ...props } = this.props;
 
 		return (
 			<ScrollView
 				style={{
-					backgroundColor: ThemeProvider.theme.page.backgroundColor,
-					padding: padded ? ThemeProvider.theme.page.padding : undefined
+					backgroundColor: theme.page.backgroundColor,
+					padding: padded ? theme.page.padding : undefined
 				}}
 				{...props}
 			>
@@ -20,3 +20,4 @@ export default class Checkbox extends React.Component {
 		);
 	}
 }
+export default withTheme(Page)

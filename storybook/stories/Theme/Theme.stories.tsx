@@ -3,7 +3,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { Page, Text } from '../../components';
 import { Theme } from '../../definitions/Theme';
-import ThemeProvider from '../../theme';
+import ThemeProvider, { ThemeContext } from '../../theme';
 import Button from '../Button/Button';
 
 const firstAndFive: Theme = {
@@ -92,40 +92,36 @@ const purple: Theme = {
 storiesOf('Theme', module).add('Update theme', () => <ButtonConatiner />);
 
 class ButtonConatiner extends React.Component {
+	state={}
 	constructor(props) {
 		super(props);
-		this.updateTheme = this.updateTheme.bind(this);
-		this.resetTheme = this.resetTheme.bind(this);
 	}
 
-	updateTheme(theme: Theme) {
-		ThemeProvider.setTheme(theme);
-		this.forceUpdate();
-	}
-
-	resetTheme() {
-		ThemeProvider.resetTheme();
-		this.forceUpdate();
+	setTheme(theme?: Theme) {
+		this.setState({theme})
 	}
 
 	render() {
 		return (
+			<ThemeContext.Provider value={this.state.theme}>
+
 			<Page padded>
-				<Button onPress={() => this.resetTheme()} label="Romarin" />
+				<Button onPress={() => this.setTheme()} label="Romarin" />
 				<View style={{ height: 16 }} />
-				<Button onPress={() => this.updateTheme(thinkShare)} label="ThinkShare" />
+				<Button onPress={() => this.setTheme(thinkShare)} label="ThinkShare" />
 				<View style={{ height: 16 }} />
-				<Button onPress={() => this.updateTheme(firstAndFive)} label="1st&5" />
+				<Button onPress={() => this.setTheme(firstAndFive)} label="1st&5" />
 				<View style={{ height: 16 }} />
-				<Button onPress={() => this.updateTheme(routineBuilder)} label="Routine Builder" />
+				<Button onPress={() => this.setTheme(routineBuilder)} label="Routine Builder" />
 				<View style={{ height: 16 }} />
-				<Button onPress={() => this.updateTheme(weightUp)} label="Weight Up" />
+				<Button onPress={() => this.setTheme(weightUp)} label="Weight Up" />
 				<View style={{ height: 16 }} />
-				<Button onPress={() => this.updateTheme(purple)} label="Purple" />
+				<Button onPress={() => this.setTheme(purple)} label="Purple" />
 				<Text>
 					{JSON.stringify(ThemeProvider.theme,null,2)}
 				</Text>
 			</Page>
+			</ThemeContext.Provider>
 		);
 	}
 }

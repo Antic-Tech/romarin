@@ -1,25 +1,24 @@
 // import Icon from '@components/Icon/Icon.component';
 import React from 'react';
 import { Image, View } from 'react-native';
-import ThemeProvider from '../../theme';
-import { withCommonProps } from '../../utils/withCommonProps';
+import { withTheme } from '../../theme';
 
-export default withCommonProps(
+export default withTheme(
 	class Checkbox extends React.Component {
 		render() {
-			const { checked } = this.props;
+			const { checked, theme } = this.props;
 
 			return (
 				<View
 					style={{
-						borderRadius: ThemeProvider.theme.checkboxBorderRadius,
+						borderRadius: theme.checkboxBorderRadius,
 						borderColor: checked
-							? ThemeProvider.theme.focusedInputBorderColor
-							: ThemeProvider.theme.inputBorderColor,
-						height: ThemeProvider.theme.checkboxSize,
-						width: ThemeProvider.theme.checkboxSize,
-						backgroundColor: checked ? ThemeProvider.theme.checkboxColorChecked : undefined,
-						borderWidth: ThemeProvider.theme.inputBorderWidth,
+							? theme.focusedInputBorderColor
+							: theme.inputBorderColor,
+						height: theme.checkboxSize,
+						width: theme.checkboxSize,
+						backgroundColor: checked ? theme.checkboxColorChecked : undefined,
+						borderWidth: theme.inputBorderWidth,
 						justifyContent: 'center',
 						alignItems: 'center'
 					}}
@@ -28,8 +27,8 @@ export default withCommonProps(
 						<Image
 							style={{
 								backgroundColor: 'transparent',
-								height: ThemeProvider.theme.checkboxSize - ThemeProvider.theme.checkboxPadding,
-								width: ThemeProvider.theme.checkboxSize - ThemeProvider.theme.checkboxPadding
+								height: theme.checkboxSize - theme.checkboxPadding,
+								width: theme.checkboxSize - theme.checkboxPadding
 							}}
 							resizeMode="cover"
 							source={require('./check.png')}

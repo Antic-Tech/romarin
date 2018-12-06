@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { TextInput, View } from 'react-native';
 import { Text } from '../../components';
-import ThemeProvider from '../../theme';
+import { withTheme } from '../../theme';
 
 class Input extends Component {
 	constructor(props) {
@@ -32,21 +32,21 @@ class Input extends Component {
 	}
 
 	render() {
-		const { label, ...props } = this.props;
+		const { label, theme, ...props } = this.props;
 		const { isFocused } = this.state;
 
 		return (
 			<View
 				style={{
-					borderRadius: ThemeProvider.theme.inputBorderRadius,
+					borderRadius: theme.inputBorderRadius,
 					borderColor: isFocused
-						? ThemeProvider.theme.focusedInputBorderColor
-						: ThemeProvider.theme.inputBorderColor,
-					backgroundColor: ThemeProvider.theme.inputBackgroundColor,
-					margin: ThemeProvider.theme.inputMargin,
-					padding: ThemeProvider.theme.inputPadding,
-					paddingHorizontal: ThemeProvider.theme.inputPaddingHorizontal,
-					borderWidth: ThemeProvider.theme.inputBorderWidth,
+						? theme.focusedInputBorderColor
+						: theme.inputBorderColor,
+					backgroundColor: theme.inputBackgroundColor,
+					margin: theme.inputMargin,
+					padding: theme.inputPadding,
+					paddingHorizontal: theme.inputPaddingHorizontal,
+					borderWidth: theme.inputBorderWidth,
 					flexDirection: 'row',
 
 					alignItems: 'center'
@@ -55,11 +55,11 @@ class Input extends Component {
 				<Text
 					style={{
 						width: 80,
-						margin: ThemeProvider.theme.inputLabelMargin,
+						margin: theme.inputLabelMargin,
 						color: isFocused
-							? ThemeProvider.theme.focusedInputLabelColor
-							: ThemeProvider.theme.inputLabelColor,
-						fontSize: ThemeProvider.theme.coreFontSizeMedium
+							? theme.focusedInputLabelColor
+							: theme.inputLabelColor,
+						fontSize: theme.coreFontSizeMedium
 						// textAlign: 'right'
 					}}
 					weight="bold"
@@ -70,11 +70,11 @@ class Input extends Component {
 					style={{
 						flexDirection: 'row',
 						flex: 1,
-						fontSize: ThemeProvider.theme.coreFontSizeMedium,
-						color: ThemeProvider.theme.inputTextColor
+						fontSize: theme.coreFontSizeMedium,
+						color: theme.inputTextColor
 					}}
-					selectionColor={ThemeProvider.theme.focusedInputLabelColor}
-					placeholderTextColor={ThemeProvider.theme.inputPlaceholderColor}
+					selectionColor={theme.focusedInputLabelColor}
+					placeholderTextColor={theme.inputPlaceholderColor}
 					onFocus={this.onFocus}
 					onBlur={this.onBlur}
 					{...props}
@@ -95,4 +95,5 @@ Input.defaultProps = {
 	label: ''
 };
 
-export { Input as default };
+export default withTheme(Input)
+

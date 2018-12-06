@@ -1,49 +1,63 @@
 import React from 'react';
 import { PixelRatio, View } from 'react-native';
 import { Text } from '../../components';
-import ThemeProvider from '../../theme';
+import { withTheme } from '../../theme';
 
-const getDividerStyle = () => ({
-	backgroundColor: ThemeProvider.theme.dividerColor,
-	height: 1 / PixelRatio.get(),
-	flex: 1
-});
-
-export default ({ label, ...rest }) =>
-	label ? (
-		<View
-			style={{
-				paddingBottom: ThemeProvider.theme.paddingMedium,
-				flexDirection: 'row',
-				flex: 1,
-				paddingVertical: ThemeProvider.theme.paddingXSmall,
-
-				alignItems: 'center'
-			}}
-			{...rest}
-		>
-			<View style={getDividerStyle()} />
-			<Text
+export default withTheme(
+	({ label, theme, ...rest }) =>
+		label ? (
+			<View
 				style={{
-					paddingLeft: ThemeProvider.theme.dividerLabelPadding,
-					paddingRight: ThemeProvider.theme.dividerLabelPadding
+					paddingBottom: theme.paddingMedium,
+					flexDirection: 'row',
+					flex: 1,
+					paddingVertical: theme.paddingXSmall,
+
+					alignItems: 'center'
 				}}
-				size="small"
-				bold
+				{...rest}
 			>
-				{label}
-			</Text>
-			<View style={getDividerStyle()} />
-		</View>
-	) : (
-		<View
-			style={{
-				flexDirection: 'row',
-				flex: 1,
-				alignItems: 'center'
-			}}
-			{...rest}
-		>
-			<View style={getDividerStyle()} />
-		</View>
-	);
+				<View
+					style={{
+						backgroundColor: theme.dividerColor,
+						height: 1 / PixelRatio.get(),
+						flex: 1
+					}}
+				/>
+				<Text
+					style={{
+						paddingLeft: theme.dividerLabelPadding,
+						paddingRight: theme.dividerLabelPadding
+					}}
+					size="small"
+					bold
+				>
+					{label}
+				</Text>
+				<View
+					style={{
+						backgroundColor: theme.dividerColor,
+						height: 1 / PixelRatio.get(),
+						flex: 1
+					}}
+				/>
+			</View>
+		) : (
+			<View
+				style={{
+					flexDirection: 'row',
+					flex: 1,
+					alignItems: 'center'
+				}}
+				{...rest}
+			>
+				<View
+					style={{
+						backgroundColor: theme.dividerColor,
+						height: 1 / PixelRatio.get(),
+						flex: 1
+					}}
+				/>
+			</View>
+		)
+);

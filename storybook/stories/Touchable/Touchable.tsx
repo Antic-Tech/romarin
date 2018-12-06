@@ -2,9 +2,9 @@ import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableHighlight, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
-import ThemeProvider from '../../theme';
+import { withTheme } from '../../theme';
 
-const Touchable = ({ children, debounceTrailing, debounceWait, onPress, type, ...props }) => {
+const Touchable = ({ children, debounceTrailing, debounceWait, onPress, type, theme, ...props }) => {
 	const touchables = {
 		highlight: TouchableHighlight,
 		opacity: TouchableOpacity,
@@ -13,10 +13,10 @@ const Touchable = ({ children, debounceTrailing, debounceWait, onPress, type, ..
 
 	const touchablesProps = {
 		opacity: {
-			activeOpacity: ThemeProvider.theme.touchableActiveOpacity
+			activeOpacity: theme.touchableActiveOpacity
 		},
 		highlight: {
-			underlayColor: ThemeProvider.theme.touchableUnderlayColor
+			underlayColor: theme.touchableUnderlayColor
 		},
 		none: {}
 	};
@@ -53,4 +53,4 @@ Touchable.defaultProps = {
 	type: 'none'
 };
 
-export default Touchable;
+export default withTheme(Touchable);

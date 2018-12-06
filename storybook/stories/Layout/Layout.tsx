@@ -1,8 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
-import { withCommonProps } from '../../utils/withCommonProps';
 
-export const Row = withCommonProps((props) => {
+export const Row = ((props) => {
 	const { style, grow, center, ...otherProps, } = props;
 	return (
 		<View
@@ -21,7 +20,7 @@ export const Row = withCommonProps((props) => {
 	);
 });
 
-export const Column = withCommonProps((props) => {
+export const Column = ((props) => {
 	const { style, grow, center, ...otherProps } = props;
 	return (
 		<View
