@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.16"></a>
+## [1.3.16](https://github.com/luigiinred/romarin/compare/v1.3.15...v1.3.16) (2018-12-06)
+
+
+
 <a name="1.3.15"></a>
 ## [1.3.15](https://github.com/luigiinred/romarin/compare/v1.3.14...v1.3.15) (2018-12-06)
 
